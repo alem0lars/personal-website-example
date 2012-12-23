@@ -1,0 +1,29 @@
+// Import the colors variables
+@import "application/lib/colors";
+
+// Import the fonts faces and variables
+@import "compass/css3/font-face";
+@import "application/lib/fonts";
+
+// Stylesheets configurations (especially for frameworks)
+@import "application/lib/config";
+
+// Import Compass
+@import "compass";
+
+// Bootstrap
+@import "bootstrap";
+body { padding-top: 40px; } // fix for the fixed menu
+// Responsive Bootstrap styles
+@import "bootstrap-responsive";
+
+// Defaults for dom elements
+@import "application/lib/defaults";
+
+// { Layout styles
+@import "application/partials/menu";
+@import "application/partials/banner";
+@import "application/partials/footer";
+@import "application/partials/sidebar";
+@import "application/partials/messages";
+// }

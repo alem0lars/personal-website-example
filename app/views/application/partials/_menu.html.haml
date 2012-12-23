@@ -1,0 +1,36 @@
+%a#menu-collapser.btn.btn-navbar{ :'data-toggle' => 'collapse', :'data-target' => '.nav-collapse' }
+  - 3.times do
+    %span.icon-bar
+
+%a#menu-brand.brand{ :href => '/' } Higgs Website
+
+#menu-items.nav-collapse
+
+  %ul#menu-links-left.nav.pull-left
+    - @left_menu.each do |item|
+      %li= link_to item.body, item.url
+
+  -# { Authentication & SignUp
+  %ul#menu-authentication-wrp.nav.pull-right
+    %li#menu-authentication.dropdown
+      %a#menu-authentication-status.dropdown-toggle{ :'data-toggle' => 'dropdown' }
+        - if user_signed_in?
+          = "Logged in as #{current_user.username}."
+        - else
+          Not logged in.
+        %b#menu-authentication-caret.caret
+      %ul#menu-authentication-options.dropdown-menu
+        - if user_signed_in?
+          %li= link_to 'Edit', edit_user_registration_path
+          %li= link_to 'Logout', destroy_user_session_path, :method => 'delete'
+        - else
+          %li= link_to 'Login', new_user_session_path
+          %li= link_to 'Signup', new_user_registration_path
+  -# }
+
+  %form#menu-search-wrp.navbar-search.pull-right
+    %input#menu-search.search-query.span2{ :type => 'text', :placeholder => 'Search' }
+
+  %ul#menu-links-right.nav.pull-right
+    -@right_menu.each do |item|
+      %li= link_to item.body, item.url

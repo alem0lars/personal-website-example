@@ -1,0 +1,60 @@
+#home
+
+  #sections-navbar.navbar
+    .navbar-inner
+      %a.brand Home Sections
+      %ul.nav
+        %li
+          %a{ :href => '#presentation' } Presentation
+        %li
+          %a{ :href => '#basic-informations' } Basic Informations
+        %li
+          %a{ :href => '#major-links' } Links
+
+  - if PresentationItem.count > 0
+    #presentation
+      %h2#presentation-title
+        %i.icon-heart
+        This is me
+
+      #presentation-items-wrp.well
+        #presentation-items.presentation-items
+          - PresentationItem.all.each do |presentation_item|
+            #presentation-item
+              = image_tag presentation_item.image.url(:small), :title => presentation_item.name, :alt => presentation_item.name
+              .presentation-item-caption
+                %em= presentation_item.name
+
+      %blockquote#presentation-quote
+        %p I have a simple philosophy: Fill what's empty. Empty what's full. Scratch where it itches.
+        %small Alice Roosevelt Longworth
+
+  #basic-informations
+    %h2#basic-informations-title
+      %i.icon-home
+      Some basic informations
+
+    %address#basic-informations-address.well
+      #name
+        %strong Alessandro Molari
+      #physical-address
+        Via San Giorgio 455
+        %br
+        Cesena (FC) 47522
+        %br
+        Italy
+        %br
+      #email
+        %abbr{ :title => 'Phone' }Email:
+        %a{ :href => 'mailto:molari.alessandro@gmail.com' }molari.alessandro@gmail.com
+      #phone-number
+        %abbr{ :title => 'Phone' }Phone:
+        347 7532861
+
+    %blockquote#basic-informations-quote
+      %p A house is not a home unless it contains food and fire for the mind as well as the body.
+      %small Benjamin Franklin
+
+  %p#major-links
+    %a#home-link.btn.btn-primary.btn-large{ :href => home_path } Home
+    %a#curriculum-link.btn.btn-large{ :href => curriculum_path } Curriculum Vitae

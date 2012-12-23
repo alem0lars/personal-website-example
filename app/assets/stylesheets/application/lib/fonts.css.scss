@@ -1,0 +1,68 @@
+// == VARIABLES
+
+$font-size-def: 13px;
+$line-height-def: 18px;
+
+// ==> FONT FACES
+
+// { Cabin Font
+$cabin-eot-path: '/assets/cabin/cabin-regular.eot';
+$cabin-woff-path: '/assets/cabin/cabin-regular.woff';
+$cabin-ttf-path: '/assets/cabin/cabin-regular.ttf';
+$cabin-svg-path: '/assets/cabin/cabin-regular.svg';
+
+@include font-face(
+  "Cabin",
+  font-files(
+    $cabin-woff-path, "woff",
+    $cabin-eot-path, "eot",
+    $cabin-ttf-path, "truetype",
+    $cabin-svg-path, "svg"
+  ),
+  $cabin-eot-path + "?#iefix",
+  normal,
+  normal
+);
+
+// }
+
+// { Inconsolata Font
+$inconsolata-eot-path: '/assets/inconsolata/inconsolata.eot';
+$inconsolata-woff-path: '/assets/inconsolata/inconsolata.woff';
+$inconsolata-ttf-path: '/assets/inconsolata/inconsolata.ttf';
+$inconsolata-svg-path: '/assets/inconsolata/inconsolata.svg';
+
+@include font-face(
+  "Inconsolata",
+  font-files(
+    $inconsolata-woff-path, "woff",
+    $inconsolata-eot-path, "eot",
+    $inconsolata-ttf-path, "truetype",
+    $inconsolata-svg-path, "svg"
+  ),
+  $inconsolata-eot-path + "?#iefix",
+  normal,
+  normal
+);
+
+// }
+
+// { Josefinslab Font
+$josefinslab-eot-path: '/assets/josefinslab/josefinslab-regular.eot';
+$josefinslab-woff-path: '/assets/josefinslab/josefinslab-regular.woff';
+$josefinslab-ttf-path: '/assets/josefinslab/josefinslab-regular.ttf';
+$josefinslab-svg-path: '/assets/josefinslab/josefinslab-regular.svg';
+
+@include font-face(
+  "Josefinslab",
+  font-files(
+    $josefinslab-woff-path, "woff",
+    $josefinslab-eot-path, "eot",
+    $josefinslab-ttf-path, "truetype",
+    $josefinslab-svg-path, "svg"
+  ),
+  $josefinslab-eot-path + "?#iefix",
+  normal,
+  normal
+);
+// }

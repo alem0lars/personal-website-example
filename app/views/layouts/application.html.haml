@@ -1,0 +1,29 @@
+!!! 5
+%html
+  %head
+    %title Alessandro Molari
+    %meta{ :charset => 'utf-8' }
+    %meta{ 'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1' }
+    %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
+    = stylesheet_link_tag :application, "#{controller.controller_name}/#{controller.action_name}", :media => 'all'
+    = yield :stylesheets
+    = include_gon
+    = javascript_include_tag :application, "#{controller.controller_name}/#{controller.action_name}"
+    = yield :javascripts
+    = csrf_meta_tags
+
+  %body{ :id => "#{controller.controller_name}-#{controller.action_name}" }
+
+    %nav#menu.navbar.navbar-fixed-top
+      .navbar-inner
+        .container= render :partial => 'application/partials/menu'
+
+    #container.container-fluid
+      %header#banner.row-fluid{ :role => 'banner' }= render :partial => 'application/partials/banner'
+      %section#container.row-fluid
+        %aside#sidebar.span4= render :partial => 'application/partials/sidebar'
+        #page.span8
+          #messages= render :partial => 'application/partials/messages'
+          #main{ :role => 'main' }= yield
+
+      %footer.row-fluid{ :role => 'contentinfo' }= render :partial => 'application/partials/footer'

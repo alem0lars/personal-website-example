@@ -1,0 +1,14 @@
+.well
+  = form_for @presentation_item, :html => { :multipart => true, :class => 'form-horizontal' } do |f|
+
+    .control-group
+      = f.label :name, class: 'control-label'
+      .controls
+        = f.text_field :name
+
+    .control-group
+      = f.label :image, class: 'control-label'
+      .controls
+        = f.file_field :image
+
+    .actions= f.submit

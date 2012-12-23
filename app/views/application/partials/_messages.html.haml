@@ -1,0 +1,5 @@
+- flash.each do |type, msgs|
+  - Array[msgs].each do |msg|
+    :coffeescript
+      msg = new Message('#{type}', '#{msg}', Message.Duration.SLOW)
+      msg.start()
