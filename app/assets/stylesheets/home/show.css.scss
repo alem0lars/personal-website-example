@@ -1,0 +1,100 @@
+@import "application/lib/colors";
+@import "compass/css3/border-radius";
+@import "compass/css3/opacity";
+
+
+$presentation-item-width: 360px;
+$presentation-item-height: 240px;
+$section-margin: 6em;
+
+
+#home-show {
+
+  #presentation {
+    margin-bottom: $section-margin;
+
+    #presentation-title {
+    }
+
+    #presentation-items-wrp {
+      #presentation-items {
+        display: none;
+        position: relative;
+        overflow: hidden;
+
+        width: $presentation-item-width;
+
+        #presentation-item {
+          display: block;
+
+          width: $presentation-item-width;
+          height: $presentation-item-height;
+
+          .presentation-item-caption {
+            position: absolute;
+            z-index: 64;
+
+            bottom: -35px; // The caption is initially hidden
+            left: 0;
+
+            max-width: 360px;
+            height: 2em;
+
+            padding: 0.3em 1.1em 0 1.1em;
+
+            line-height: 1.33;
+            font-size: 1.2em;
+
+            @include border-top-right-radius(0.3em);
+
+            color: $white;
+            background-color: $black;
+            @include opacity(0.5);
+          }
+        }
+      }
+    }
+  }
+
+  #basic-informations {
+    margin-bottom: $section-margin;
+
+    #basic-informations-title {
+    }
+
+    #basic-informations-address {
+
+      #name {
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+
+      #physical-address {
+        margin-bottom: 1em;
+      }
+
+      #email {
+        margin-bottom: 1em;
+      }
+
+      #phone-number {
+      }
+    }
+
+    #basic-informations-quote {
+    }
+  }
+
+  #major-links {
+    margin-bottom: $section-margin;
+
+    #home-link {
+    }
+
+    #curriculum-link {
+    }
+
+    #management-link {
+    }
+  }
+}

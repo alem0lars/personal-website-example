@@ -1,0 +1,31 @@
+=README for Alessandro Molari personal website
+
+==Description
+
+Personal website for Alessandro Molari @ nextreamlabs.org
+
+===Main Pages
+
+* Home
+* Curriculum
+* Blog
+* Contact
+* Ideas/Sketches
+* Box
+
+==Requirements
+
+===Required Gems
+
+The list of ruby gems requirements can be found here: {file:Gemfile Required Gems}
+
+===Other Requirements
+
+==Credits
+
+===Contributors
+
+* *"Alessandro Molari":http://alessandro.nextreamlabs.org*
+
+
+Copyright (c) @2012@ by "nextreamlabs (Visit the nextreamlabs official website)":http://nextreamlabs.org. All rights reserved.

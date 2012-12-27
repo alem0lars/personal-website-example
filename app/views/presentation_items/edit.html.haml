@@ -1,0 +1,9 @@
+%h2= "Edit the Presentation Item ##{@presentation_item.id}"
+
+= render 'form'
+
+
+-# { Assets
+- content_for :stylesheets do
+  = stylesheet_link_tag :'presentation_items/edit', :media => 'all'
+-# }
